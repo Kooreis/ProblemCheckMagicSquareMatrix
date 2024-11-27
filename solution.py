@@ -1,8 +1,4 @@
-def is_magic_square(matrix):
-    # Calculate the sum of the first row
-    sum_row = sum(matrix[0])
-
-    # Check the sums of all other rows
-    for row in matrix:
-        if sum(row) != sum_row:
+    # Check the sums of all columns
+    for col in range(len(matrix[0])):
+        if sum(row[col] for row in matrix) != sum_row:
             return False
